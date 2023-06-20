@@ -39,4 +39,14 @@ public class MathUtilTest {
             assertEquals(expectedOutput, achievedOutput,"The method should add given input." );
         */
     }
+
+
+
+    @Test
+    public void computeCircleAreaTest(){
+        MathUtil mathUtil = new MathUtil();
+        // consider radius = 10
+        double expectedArea = Math.PI * 10 * 10;
+        assertEquals(expectedArea, mathUtil.computeCircleArea(10));
+    }
 }
