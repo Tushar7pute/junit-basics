@@ -49,4 +49,11 @@ public class MathUtilTest {
         double expectedArea = Math.PI * 10 * 10;
         assertEquals(expectedArea, mathUtil.computeCircleArea(10));
     }
+
+
+    @Test
+    void divisionTest(){
+        MathUtil mathUtil = new MathUtil();
+        assertThrows(ArithmeticException.class, () -> mathUtil.divide(1,0));
+    }
 }
