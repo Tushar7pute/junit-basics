@@ -1,9 +1,6 @@
 package org.example;
 
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.*;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -80,5 +77,12 @@ public class MathUtilTest {
     void divisionTest(){
         // MathUtil mathUtil = new MathUtil(); --> Eliminated as we are using @BeforeEach above
         assertThrows(ArithmeticException.class, () -> mathUtil.divide(1,0));
+    }
+
+    @Test
+    @DisplayName("Demo for @Disabled annotation")
+    @Disabled
+    void disabledDemoTest(){
+        fail("This test should be disabled since its failing.");
     }
 }
