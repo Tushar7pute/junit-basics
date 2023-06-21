@@ -1,5 +1,6 @@
 package org.example;
 
+import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -29,6 +30,11 @@ public class MathUtilTest {
     @BeforeEach
     void init(){
         mathUtil = new MathUtil();
+    }
+
+    @AfterEach
+    void cleanUp(){
+        System.out.println("CLeaning Up.....");
     }
 
     @Test
