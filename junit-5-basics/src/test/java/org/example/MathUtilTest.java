@@ -73,6 +73,17 @@ public class MathUtilTest {
 
 
     @Test
+    @DisplayName("Multiply Method")
+    void multiplicationTest(){
+        assertAll(
+                () -> assertEquals(4 , mathUtil.multiply(2,2)),
+                        () -> assertEquals(0 , mathUtil.multiply(2,0)),
+                                () -> assertEquals(-2 , mathUtil.multiply(2,-1))
+        );
+    }
+
+
+    @Test
     @DisplayName("Testing Division Function")
     void divisionTest(){
         // MathUtil mathUtil = new MathUtil(); --> Eliminated as we are using @BeforeEach above
